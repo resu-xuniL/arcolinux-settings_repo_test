@@ -1,0 +1,1 @@
+Arcolinux settings by resu-xuniL
