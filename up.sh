@@ -30,7 +30,8 @@ echo "####################################"
 echo "Write your commit comment!"
 echo "####################################"
 
-read input
+# read input
+input=$(ls x86_64 | grep '.pkg.tar.zst' | cut -d '-' -f6)
 
 # Committing to the local repository with a message containing the time details and commit text
 
