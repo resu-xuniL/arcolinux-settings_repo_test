@@ -35,7 +35,7 @@ input=$(ls x86_64 | grep '.pkg.tar.zst' | cut -d '-' -f6)
 
 # Committing to the local repository with a message containing the time details and commit text
 
-git commit -m "Release {$input}"
+git commit -m "Release ${input}"
 
 # Push the local files to github
 
