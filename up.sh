@@ -26,22 +26,19 @@ cd ..
 # Below command will backup everything inside the project folder
 git add --all .
 
-echo "####################################"
-echo "Write your commit comment!"
-echo "####################################"
 
-# read input
+# Set commit message
 input=$(ls x86_64 | grep '.pkg.tar.zst' | cut -d '-' -f6)
 
+tput setaf 3
+echo "####################################"
+echo " Commit message will be : Release ${input}"
+echo "####################################"
+echo
+tput sgr0
 # Committing to the local repository with a message containing the time details and commit text
-
 git commit -m "Release ${input}"
 
 # Push the local files to github
-
 git push -u origin main
 #git push -u origin main --force
-
-echo "################################################################"
-echo "###################    Git Push Done      ######################"
-echo "################################################################"
