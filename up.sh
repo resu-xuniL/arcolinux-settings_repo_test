@@ -18,7 +18,7 @@
 
 # Creating the databases
 rm x86_64/arcolinux-settings_repo_test*
-repo-add -n -R arcolinux-settings_repo_test.db.tar.gz *.pkg.tar.zst
+repo-add -n -R x86_64/arcolinux-settings_repo_test.db.tar.gz *.pkg.tar.zst
 
 # Below command will backup everything inside the project folder
 git add --all .
