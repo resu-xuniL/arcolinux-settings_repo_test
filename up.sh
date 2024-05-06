@@ -1,8 +1,9 @@
 #!/bin/bash
 
+workdir=$(pwd)
 # Creating the database
-rm ./x86_64/arcolinux-settings_repo_test*
-repo-add -n -R ./x86_64/arcolinux-settings_repo_test.db.tar.gz *.pkg.tar.zst
+rm ${workdir}/x86_64/arcolinux-settings_repo_test*
+repo-add -n -R ${workdir}/x86_64/arcolinux-settings_repo_test.db.tar.gz *.pkg.tar.zst
 
 # Creating the databases
 # cd x86_64
