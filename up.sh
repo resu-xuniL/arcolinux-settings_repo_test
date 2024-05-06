@@ -9,7 +9,7 @@ repo-add -n -R x86_64/arcolinux-settings_repo_test.db.tar.gz x86_64/*.pkg.tar.zs
 git add --all .
 
 # Set commit message
-input=$(ls x86_64 | grep '.pkg.tar.zst' | cut -d '-' -f6)
+input=$(ls x86_64 | grep '.pkg.tar.zst' | cut -d '-' -f 5,6)
 
 tput setaf 3
 echo " Commit message will be : Release ${input}"
