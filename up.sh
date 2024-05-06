@@ -1,24 +1,14 @@
 #!/bin/bash
-#set -e
 
-# Undo last commit
-# https://www.git-tower.com/learn/git/faq/undo-last-commit
-
-# reset - commit your changes or stash them before you merge
-# git reset --hard - ArcoLinux alias - grh
-
-# reset - go back one commit - all is lost
-# git reset --hard HEAD~1
-
-
-# remove a file online but keep it locally
-# https://www.baeldung.com/ops/git-remove-file-without-deleting-it
-# git rm --cached file.txt
-
+# Creating the database
+# rm x86_64/arcolinux-settings_repo_test*
+# repo-add -n -R x86_64/arcolinux-settings_repo_test.db.tar.gz *.pkg.tar.zst
 
 # Creating the databases
-# rm x86_64/arcolinux-settings_repo_test*
-repo-add -n -R x86_64/arcolinux-settings_repo_test.db.tar.gz *.pkg.tar.zst
+cd x86_64
+sh up-repo.sh
+cd ..
+
 
 # Below command will backup everything inside the project folder
 git add --all .
